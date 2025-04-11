@@ -30,5 +30,14 @@
     "eslint-config-next": "15.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+       json
+   "scripts": {
+     // الإبقاء على السكربتات الموجودة
+     "pages:build": "npx @cloudflare/next-on-pages",
+     "preview": "npm run pages:build && wrangler pages dev",
+     "deploy": "npm run pages:build && wrangler pages deploy"
+   }
+
   }
+  
 }

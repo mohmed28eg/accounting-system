@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+typescript
+   import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+   /** @type {import('next').NextConfig} */
+   const nextConfig = {
+     // إعدادات التكوين الخاصة بك هنا
+   };
 
-export default nextConfig;
+   if (process.env.NODE_ENV === 'development') {
+     setupDevPlatform();
+   }
+
+   export default nextConfig;
